@@ -29,10 +29,10 @@ def GLuint64 = ulong;
 def GLuint64EXT = ulong;
 def GLhalfNV =  ushort;
 def GLvdpauSurfaceNV =  GLintptr;
-
-
 def GLfloat = float;
 def GLsizeiptr = ulong;
+def GLsizeiptrARB = ulong;
+
 const GL_CURRENT_BIT = 0x00000001;
 const GL_POINT_BIT = 0x00000002;
 const GL_LINE_BIT = 0x00000004;
