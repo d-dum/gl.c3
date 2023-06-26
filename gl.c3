@@ -1,4 +1,4 @@
-module gl;
+module core::gl;
 
 def GLenum =  uint;
 def GLboolean =  char;
@@ -5655,11 +5655,12 @@ extern fn void glGetSamplerParameteriv(GLuint sampler, GLenum pname, GLint param
 extern fn void glGetSemaphoreParameterivNV(GLuint semaphore, GLenum pname, GLint params);
 extern fn void glGetSemaphoreParameterui64vEXT(GLuint semaphore, GLenum pname, GLuint64 params);
 extern fn void glGetSeparableFilter(GLenum target, GLenum format, GLenum type);
+extern fn GLuint glCreateShader(GLenum);
 extern fn void glGetSeparableFilterEXT(GLenum target, GLenum format, GLenum type);
-extern fn void glGetShaderInfoLog(GLuint shader, GLsizei bufSize, GLsizei length, GLchar infoLog);
+extern fn void glGetShaderInfoLog(GLuint shader, GLsizei bufSize, GLsizei* length, GLchar* infoLog);
 extern fn void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint range, GLint precision);
 extern fn void glGetShaderSource(GLuint shader, GLsizei bufSize, GLsizei length, GLchar source);
-extern fn void glGetShaderiv(GLuint shader, GLenum pname, GLint params);
+extern fn void glGetShaderiv(GLuint shader, GLenum pname, GLint* params);
 extern fn void glGetShadingRateImagePaletteNV(GLuint viewport, GLuint entry, GLenum rate);
 extern fn void glGetShadingRateSampleLocationivNV(GLenum rate, GLuint samples, GLuint index, GLint location);
 extern fn void glGetSharpenTexFuncSGIS(GLenum target, GLfloat points);
@@ -6766,7 +6767,7 @@ extern fn void glShaderBinary(GLsizei count, GLuint shaders, GLenum binaryFormat
 extern fn void glShaderOp1EXT(GLenum op, GLuint res, GLuint arg1);
 extern fn void glShaderOp2EXT(GLenum op, GLuint res, GLuint arg1, GLuint arg2);
 extern fn void glShaderOp3EXT(GLenum op, GLuint res, GLuint arg1, GLuint arg2, GLuint arg3);
-extern fn void glShaderSource(GLuint shader, GLsizei count, GLchar string, GLint length);
+extern fn void glShaderSource(GLuint shader, GLsizei count, GLchar* string, GLint* length);
 extern fn void glShaderStorageBlockBinding(GLuint program, GLuint storageBlockIndex, GLuint storageBlockBinding);
 extern fn void glShadingRateEXT(GLenum rate);
 extern fn void glShadingRateCombinerOpsEXT(GLenum combinerOp0, GLenum combinerOp1);
